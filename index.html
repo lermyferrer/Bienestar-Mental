@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MenteZen - Servicios de Bienestar Mental</title>
+    <title>Iker Sarmiento Ferrer - Abogado | Servicios Legales</title>
     <style>
         * {
             margin: 0;
@@ -354,6 +354,183 @@
             background: #f39c12;
         }
 
+        /* Estilos Pasarela de Pago */
+        .modal-pago {
+            max-width: 700px;
+        }
+
+        .info-producto-pago {
+            background: #f5f7fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .info-producto-pago h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .precio-pago {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        .metodos-pago-container h3 {
+            margin-bottom: 1.5rem;
+            text-align: left;
+            color: #333;
+        }
+
+        .metodos-pago-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metodo-pago-card {
+            background: #f5f7fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .metodo-pago-card:hover {
+            background: #e8ecf1;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .metodo-pago-card.seleccionado {
+            border-color: #667eea;
+            background: #e8f0fe;
+        }
+
+        .metodo-icono {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .metodo-pago-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .metodo-pago-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .metodo-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .metodo-logos span {
+            background: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+
+        .formulario-pago {
+            background: #f5f7fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .formulario-pago h4 {
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn-pagar {
+            width: 100%;
+            background: #50c878;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-pagar:hover {
+            background: #45b869;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(80, 200, 120, 0.3);
+        }
+
+        .btn-pagar:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .info-pse {
+            background: #e8f0fe;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-pse p {
+            color: #333;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .dofa-grid {
                 grid-template-columns: 1fr;
@@ -375,36 +552,36 @@
     <!-- Navegación -->
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#tienda">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Página de Inicio -->
     <section id="inicio">
-        <div class="logo">🧘‍♀️ MenteZen</div>
-        <h1>Bienestar Mental para una Vida Plena</h1>
+        <div class="logo">⚖️</div>
+        <h1>Iker Sarmiento Ferrer - Abogado</h1>
         
         <div class="descripcion">
-            <p>En MenteZen creemos que la salud mental es fundamental para una vida equilibrada y feliz. Ofrecemos servicios profesionales de psicología y bienestar mental adaptados a tus necesidades, con un enfoque personalizado y basado en evidencia científica.</p>
+            <p>Abogado especializado en brindar servicios legales de calidad con un enfoque personalizado y profesional. Ofrecemos asesoría jurídica integral, representación legal y consultoría en diversas áreas del derecho para proteger tus intereses y garantizar el cumplimiento de tus derechos.</p>
         </div>
 
         <div class="servicios-preview">
             <div class="servicio-card">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="Terapia Individual">
-                <h3>Terapia Individual</h3>
-                <p>Sesiones personalizadas para tu crecimiento personal</p>
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400" alt="Consultoría Legal">
+                <h3>Consultoría Legal</h3>
+                <p>Asesoría jurídica personalizada para tus necesidades</p>
             </div>
             <div class="servicio-card">
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400" alt="Terapia de Pareja">
-                <h3>Terapia de Pareja</h3>
-                <p>Fortalece tu relación con herramientas efectivas</p>
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400" alt="Representación Legal">
+                <h3>Representación Legal</h3>
+                <p>Defensa profesional en procesos judiciales y administrativos</p>
             </div>
             <div class="servicio-card">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" alt="Mindfulness">
-                <h3>Mindfulness</h3>
-                <p>Aprende técnicas de meditación y relajación</p>
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400" alt="Asesoría en Contratos">
+                <h3>Asesoría en Contratos</h3>
+                <p>Revisión y redacción de contratos comerciales y civiles</p>
             </div>
         </div>
 
@@ -418,49 +595,49 @@
         <div class="productos-grid">
             <!-- Producto 1 -->
             <div class="producto">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500" alt="Terapia Individual">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500" alt="Consultoría Legal">
                 <div class="producto-info">
-                    <h3>Terapia Individual</h3>
-                    <p>Sesiones de 60 minutos con psicólogo profesional. Enfoque cognitivo-conductual adaptado a tus necesidades específicas. Incluye seguimiento personalizado y ejercicios prácticos.</p>
-                    <div class="precio">$80.000 / sesión</div>
+                    <h3>Consultoría Legal</h3>
+                    <p>Asesoría jurídica personalizada de 60 minutos. Análisis de tu caso, orientación legal especializada y recomendaciones estratégicas. Incluye revisión de documentos y seguimiento inicial.</p>
+                    <div class="precio">$150.000 / consulta</div>
                     <div class="metodos-pago">
                         <h4>Métodos de pago disponibles:</h4>
                         <span class="metodo">💳 Tarjeta Crédito/Débito</span>
                         <span class="metodo">📱 Transferencia Bancaria</span>
                     </div>
-                    <button class="btn-comprar" onclick="comprar('Terapia Individual')">Comprar Ahora</button>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Consultoría Legal', 150000)">Contratar Ahora</button>
                 </div>
             </div>
 
             <!-- Producto 2 -->
             <div class="producto">
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500" alt="Terapia de Pareja">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500" alt="Representación Legal">
                 <div class="producto-info">
-                    <h3>Terapia de Pareja</h3>
-                    <p>Sesiones de 90 minutos para fortalecer la comunicación y resolver conflictos. Técnicas probadas para mejorar la relación. Ambiente confidencial y seguro.</p>
-                    <div class="precio">$120.000 / sesión</div>
+                    <h3>Representación Legal</h3>
+                    <p>Representación profesional en procesos judiciales y administrativos. Incluye preparación de documentos, audiencias y seguimiento completo del caso. Ideal para demandas, defensas y trámites legales.</p>
+                    <div class="precio">$500.000 / proceso</div>
                     <div class="metodos-pago">
                         <h4>Métodos de pago disponibles:</h4>
                         <span class="metodo">💳 Tarjeta Crédito/Débito</span>
-                        <span class="metodo">💰 PSE</span>
+                        <span class="metodo">💳 Mercado Pago</span>
                     </div>
-                    <button class="btn-comprar" onclick="comprar('Terapia de Pareja')">Comprar Ahora</button>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Representación Legal', 500000)">Contratar Ahora</button>
                 </div>
             </div>
 
             <!-- Producto 3 -->
             <div class="producto">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" alt="Programa Mindfulness">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500" alt="Asesoría en Contratos">
                 <div class="producto-info">
-                    <h3>Programa Mindfulness</h3>
-                    <p>Curso completo de 8 semanas. Aprende meditación, técnicas de respiración y manejo del estrés. Incluye material de apoyo y sesiones grupales online.</p>
-                    <div class="precio">$350.000 / programa completo</div>
+                    <h3>Asesoría en Contratos</h3>
+                    <p>Revisión y redacción profesional de contratos comerciales, civiles y laborales. Análisis de cláusulas, identificación de riesgos y protección de tus intereses. Incluye hasta 2 revisiones.</p>
+                    <div class="precio">$300.000 / contrato</div>
                     <div class="metodos-pago">
                         <h4>Métodos de pago disponibles:</h4>
                         <span class="metodo">💳 Tarjeta Crédito/Débito</span>
-                        <span class="metodo">📱 Nequi / Daviplata</span>
+                        <span class="metodo">💳 Mercado Pago</span>
                     </div>
-                    <button class="btn-comprar" onclick="comprar('Programa Mindfulness')">Comprar Ahora</button>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Asesoría en Contratos', 300000)">Contratar Ahora</button>
                 </div>
             </div>
         </div>
@@ -472,17 +649,17 @@
         <div class="equipo-grid">
             <div class="miembro">
             <div class="miembro">
-                <img src="https://lujored.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-22-at-11.50.01.jpeg" alt="Integrante 2">
-                <h3>Iker David Sarmiento Ferrer</h3>
-                <p>Especialista Salud Mental</p>
+                <img src="https://lujored.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-22-at-11.50.01.jpeg" alt="Iker Sarmiento Ferrer">
+                <h3>Iker Sarmiento Ferrer</h3>
+                <p>Abogado</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="logo">🧘‍♀️ MenteZen</div>
-        <p>&copy; 2024 MenteZen - Todos los derechos reservados</p>
+        <div class="logo">⚖️ Iker Sarmiento Ferrer - Abogado</div>
+        <p>&copy; 2024 Iker Sarmiento Ferrer - Todos los derechos reservados</p>
         <div class="redes-sociales">
             <a href="#" title="Facebook">📘</a>
             <a href="#" title="Instagram">📷</a>
@@ -495,47 +672,144 @@
     <div id="dofaModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2>Análisis DOFA - MenteZen</h2>
+            <h2>Análisis DOFA - Servicios Legales</h2>
             
             <div class="dofa-grid">
                 <div class="dofa-item debilidades">
                     <h3>Debilidades</h3>
                     <ul>
-                        <li>Marca nueva en el mercado</li>
+                        <li>Despacho nuevo en el mercado</li>
                         <li>Presupuesto limitado para marketing</li>
                         <li>Equipo pequeño de profesionales</li>
-                        <li>Dependencia de plataformas digitales</li>
+                        <li>Dependencia de referencias y boca a boca</li>
                     </ul>
                 </div>
                 
                 <div class="dofa-item oportunidades">
                     <h3>Oportunidades</h3>
                     <ul>
-                        <li>Creciente demanda de salud mental</li>
-                        <li>Aumento de teleterapia post-pandemia</li>
-                        <li>Alianzas con empresas</li>
-                        <li>Expansión a otras ciudades</li>
+                        <li>Creciente demanda de servicios legales</li>
+                        <li>Digitalización de procesos legales</li>
+                        <li>Alianzas con empresas y consultorías</li>
+                        <li>Expansión de servicios online</li>
                     </ul>
                 </div>
                 
                 <div class="dofa-item fortalezas">
                     <h3>Fortalezas</h3>
                     <ul>
-                        <li>Profesionales altamente capacitados</li>
-                        <li>Atención personalizada</li>
+                        <li>Profesional altamente capacitado</li>
+                        <li>Atención personalizada y confidencial</li>
                         <li>Plataforma digital moderna</li>
-                        <li>Precios competitivos</li>
+                        <li>Precios competitivos y transparentes</li>
                     </ul>
                 </div>
                 
                 <div class="dofa-item amenazas">
                     <h3>Amenazas</h3>
                     <ul>
-                        <li>Alta competencia en el sector</li>
-                        <li>Regulaciones cambiantes</li>
-                        <li>Estigma social sobre terapia</li>
-                        <li>Crisis económicas</li>
+                        <li>Alta competencia en el sector legal</li>
+                        <li>Cambios en normativas legales</li>
+                        <li>Desconfianza en servicios legales online</li>
+                        <li>Crisis económicas que afecten contratación</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pasarela de Pago -->
+    <div id="modalPago" class="modal">
+        <div class="modal-content modal-pago">
+            <span class="close-modal" onclick="cerrarPasarelaPago()">&times;</span>
+            <h2>Pasarela de Pago</h2>
+            
+            <div id="infoProducto" class="info-producto-pago">
+                <h3 id="nombreProducto"></h3>
+                <p class="precio-pago">Total: <span id="precioProducto"></span></p>
+            </div>
+
+            <div class="metodos-pago-container">
+                <h3>Selecciona tu método de pago</h3>
+                
+                <div class="metodos-pago-grid">
+                    <!-- Método 1: Tarjeta -->
+                    <div class="metodo-pago-card" onclick="seleccionarMetodo('tarjeta')">
+                        <div class="metodo-icono">💳</div>
+                        <h4>Tarjeta de Crédito/Débito</h4>
+                        <p>Paga de forma segura con tu tarjeta</p>
+                        <div class="metodo-logos">
+                            <span>Visa</span>
+                            <span>Mastercard</span>
+                            <span>Amex</span>
+                        </div>
+                    </div>
+
+                    <!-- Método 2: Mercado Pago -->
+                    <div class="metodo-pago-card" onclick="seleccionarMetodo('pse')">
+                        <div class="metodo-icono">💳</div>
+                        <h4>Mercado Pago</h4>
+                        <p>Paga con tarjeta, efectivo o transferencia</p>
+                        <div class="metodo-logos">
+                            <span>Tarjeta</span>
+                            <span>Efectivo</span>
+                            <span>Transferencia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Pago - Tarjeta -->
+                <div id="formularioTarjeta" class="formulario-pago" style="display: none;">
+                    <h4>Información de la Tarjeta</h4>
+                    <form id="formTarjeta" onsubmit="procesarPagoTarjeta(event)">
+                        <div class="form-group">
+                            <label>Número de Tarjeta</label>
+                            <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Fecha de Vencimiento</label>
+                                <input type="text" placeholder="MM/AA" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre del Titular</label>
+                            <input type="text" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Documento</label>
+                            <select required>
+                                <option value="">Seleccione</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PA">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Número de Documento</label>
+                            <input type="text" placeholder="Número de documento" required>
+                        </div>
+                        <button type="submit" class="btn-pagar">Pagar Ahora</button>
+                    </form>
+                </div>
+
+                <!-- Formulario de Pago - Mercado Pago -->
+                <div id="formularioPSE" class="formulario-pago" style="display: none;">
+                    <h4>Pago con Mercado Pago</h4>
+                    <form id="formPSE" onsubmit="procesarPagoPSE(event)">
+                        <div class="info-pse">
+                            <p>💳 Serás redirigido a Mercado Pago para completar tu pago de forma segura. Podrás pagar con tarjeta, efectivo o transferencia.</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Email (opcional)</label>
+                            <input type="email" placeholder="tu@email.com">
+                        </div>
+                        <button type="submit" class="btn-pagar">Continuar con Mercado Pago</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -548,10 +822,6 @@
 
         function closeModal() {
             document.getElementById('dofaModal').style.display = 'none';
-        }
-
-        function comprar(servicio) {
-            alert('¡Gracias por tu interés en ' + servicio + '!\n\nSerás redirigido a la página de pago.\n\nMétodos disponibles:\n- Tarjeta de Crédito/Débito\n- Transferencia Bancaria / PSE\n- Nequi / Daviplata');
         }
 
         window.onclick = function(event) {
@@ -573,6 +843,7 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

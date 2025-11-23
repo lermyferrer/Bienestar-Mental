@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Legales - Iker Sarmiento Ferrer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html" class="active">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Tienda en Línea -->
+    <section id="tienda">
+        <h2>Nuestros Servicios Legales</h2>
+        
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500" alt="Consultoría Legal">
+                <div class="producto-info">
+                    <h3>Consultoría Legal</h3>
+                    <p>Asesoría jurídica personalizada de 60 minutos. Análisis de tu caso, orientación legal especializada y recomendaciones estratégicas. Incluye revisión de documentos y seguimiento inicial.</p>
+                    <div class="precio">$150.000 / consulta</div>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Consultoría Legal', 150000)">Contratar Ahora</button>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500" alt="Representación Legal">
+                <div class="producto-info">
+                    <h3>Representación Legal</h3>
+                    <p>Representación profesional en procesos judiciales y administrativos. Incluye preparación de documentos, audiencias y seguimiento completo del caso. Ideal para demandas, defensas y trámites legales.</p>
+                    <div class="precio">$500.000 / proceso</div>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Representación Legal', 500000)">Contratar Ahora</button>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500" alt="Asesoría en Contratos">
+                <div class="producto-info">
+                    <h3>Asesoría en Contratos</h3>
+                    <p>Revisión y redacción profesional de contratos comerciales, civiles y laborales. Análisis de cláusulas, identificación de riesgos y protección de tus intereses. Incluye hasta 2 revisiones.</p>
+                    <div class="precio">$300.000 / contrato</div>
+                    <button class="btn-comprar" onclick="abrirPasarelaPago('Asesoría en Contratos', 300000)">Contratar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">⚖️ Iker Sarmiento Ferrer - Abogado</div>
+        <p>&copy; 2024 Iker Sarmiento Ferrer - Todos los derechos reservados</p>
+        <div class="redes-sociales">
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="WhatsApp">💬</a>
+            <a href="#" title="Email">📧</a>
+        </div>
+    </footer>
+
+    <!-- Modal Pasarela de Pago -->
+    <div id="modalPago" class="modal">
+        <div class="modal-content modal-pago">
+            <span class="close-modal" onclick="cerrarPasarelaPago()">&times;</span>
+            <h2>Pasarela de Pago</h2>
+            
+            <div id="infoProducto" class="info-producto-pago">
+                <h3 id="nombreProducto"></h3>
+                <p class="precio-pago">Total: <span id="precioProducto"></span></p>
+            </div>
+
+            <div class="metodos-pago-container">
+                <h3>Selecciona tu método de pago</h3>
+                
+                <div class="metodos-pago-grid">
+                    <!-- Método 1: Tarjeta -->
+                    <div class="metodo-pago-card" onclick="seleccionarMetodo('tarjeta')">
+                        <div class="metodo-icono">💳</div>
+                        <h4>Tarjeta de Crédito/Débito</h4>
+                        <p>Paga de forma segura con tu tarjeta</p>
+                        <div class="metodo-logos">
+                            <span>Visa</span>
+                            <span>Mastercard</span>
+                            <span>Amex</span>
+                        </div>
+                    </div>
+
+                    <!-- Método 2: Mercado Pago -->
+                    <div class="metodo-pago-card" onclick="seleccionarMetodo('pse')">
+                        <div class="metodo-icono">💳</div>
+                        <h4>Mercado Pago</h4>
+                        <p>Paga con tarjeta, efectivo o transferencia</p>
+                        <div class="metodo-logos">
+                            <span>Tarjeta</span>
+                            <span>Efectivo</span>
+                            <span>Transferencia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Pago - Tarjeta -->
+                <div id="formularioTarjeta" class="formulario-pago" style="display: none;">
+                    <h4>Información de la Tarjeta</h4>
+                    <form id="formTarjeta" onsubmit="procesarPagoTarjeta(event)">
+                        <div class="form-group">
+                            <label>Número de Tarjeta</label>
+                            <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Fecha de Vencimiento</label>
+                                <input type="text" placeholder="MM/AA" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre del Titular</label>
+                            <input type="text" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Documento</label>
+                            <select required>
+                                <option value="">Seleccione</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PA">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Número de Documento</label>
+                            <input type="text" placeholder="Número de documento" required>
+                        </div>
+                        <button type="submit" class="btn-pagar">Pagar Ahora</button>
+                    </form>
+                </div>
+
+                <!-- Formulario de Pago - Mercado Pago -->
+                <div id="formularioPSE" class="formulario-pago" style="display: none;">
+                    <h4>Pago con Mercado Pago</h4>
+                    <form id="formPSE" onsubmit="procesarPagoPSE(event)">
+                        <div class="info-pse">
+                            <p>💳 Serás redirigido a Mercado Pago para completar tu pago de forma segura. Podrás pagar con tarjeta, efectivo o transferencia.</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Email (opcional)</label>
+                            <input type="email" placeholder="tu@email.com">
+                        </div>
+                        <button type="submit" class="btn-pagar">Continuar con Mercado Pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
