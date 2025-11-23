@@ -133,6 +133,17 @@ h2 {
     transform: translateY(-2px);
 }
 
+/* Botones de Mercado Pago */
+.mp-payment-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.mp-payment-button iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
